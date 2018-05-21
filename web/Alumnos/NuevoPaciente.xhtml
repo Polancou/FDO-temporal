@@ -24,11 +24,10 @@
                             <p:growl id="growl" sticky="true" showDetail="true"/>
 
                             <p:wizard>
-
-                                <p:tab id="dientes" title="Datos Personales">
-                                    <ui:include src="VistaDientes.xhtml"/>
+                                <p:tab id="VistaDientes" title="VistaDientes">
+                                    <ui:include src="VistaDientes.xhtml" />
                                 </p:tab>
-
+                                
                                 <p:tab id="Datos_Paciente" title="Datos Personales">
                                     <ui:include src="Paciente.xhtml" />
                                 </p:tab>
@@ -44,10 +43,15 @@
                                         <ui:include src="ExaOrofacial.xhtml"/>
                                     </p:panel>
                                 </p:tab>
+                                <p:tab id="Control_placa" title="Control de Placa Dentobacteriana">
+                                    <p:panel header="Control de placa dentobacteriana">
+                                        <ui:include src="Odontograma.xhtml"/>
+                                    </p:panel>
+                                </p:tab>
 
                                 <p:tab id="confirm" title="Odontograma">
                                     <p:panel header="Odontograma">
-                                        <ui:include src="Odontograma.xhtml"/>
+                                        <ui:include src="VistaDientes.xhtml"/>
                                         <p:commandButton value="Submit" actionListener="#{newwizard.acito}" update="growl" process="@this"/>
                                     </p:panel>
                                 </p:tab>
